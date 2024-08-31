@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        #searchForm {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        #searchInput {
+            flex-grow: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        #searchButton {
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 0 4px 4px 0;
+        }
+        #results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .result-column {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        .result-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .result-item h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .result-item p {
+            margin: 5px 0;
+        }
+        .result-item a {
+            color: #5cb85c;
+            text-decoration: none;
+        }
+        .result-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Academic Search</h1>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Enter your search query" required>
+            <button type="submit" id="searchButton">Search</button>
+        </form>
+        <div id="results">
+            <div class="result-column">
+                <h2>Google Scholar Results</h2>
+                <div id="scholarResults"></div>
+            </div>
+            <div class="result-column">
+                <h2>PubMed Results</h2>
+                <div id="pubmedResults"></div>
+            </div>
+            <div class="result-column">
+                <h2>arXiv Results</h2>
+                <div id="arxivResults"></div>
+            </div>
+            <div class="result-column">
+                <h2>IEEE Xplore Results</h2>
+                <div id="ieeeResults"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
